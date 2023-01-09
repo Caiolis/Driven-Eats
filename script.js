@@ -1,0 +1,54 @@
+// Shopping Cart
+let main_dish = ''
+let drink = ''
+let dessert = ''
+
+// Pick the selected plate
+function pickPlate(element) {
+    //Verify if the selected dish is the main dish, the drink or the dessert
+
+    // Main Dish
+    if(element.classList.contains('main-dish')) {
+        if(main_dish == '') {
+            main_dish = element    
+            addStyle(main_dish)
+        } else {
+            if(element != main_dish) {
+                addStyle(main_dish)
+                main_dish = element
+                addStyle(main_dish)
+            }
+        }
+    // Drink
+    } else if(element.classList.contains('drink')) {
+        if(drink == '') {
+            drink = element    
+            addStyle(drink)
+        } else {
+            if(element != drink) {
+                addStyle(drink)
+                drink = element
+                addStyle(drink)
+            }
+        }
+    // Dessert        
+    } else {
+        if(dessert == '') {
+            dessert = element    
+            addStyle(dessert)
+        } else {
+            if(element != dessert) {
+                addStyle(dessert)
+                dessert = element
+                addStyle(dessert)
+            }
+        }
+    }
+    
+}
+
+// Add the selected style to the plate
+function addStyle(plate) {
+    plate.classList.toggle('active');
+}
+
