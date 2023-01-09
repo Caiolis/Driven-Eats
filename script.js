@@ -52,6 +52,8 @@ function pickPlate(element) {
 
 // Add the selected style to the plate
 function addStyle(plate) {
+    const check = plate.querySelector('.bottom-part-container .check-container')
+    check.classList.toggle('hide')
     plate.classList.toggle('active');
 }
 
