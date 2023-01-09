@@ -122,12 +122,16 @@ header span {
   width: 364px;
   height: 61px;
   border-radius: 50px;
-  background-color: #32b72f;
+  background-color: #32B72F;
   font-weight: 700;
   font-size: 20px;
   border: none;
   outline: none;
   color: #ffffff;
+}
+
+.bottom-bar button:active {
+  background-color: #32B72F;
 }
 
 .bottom-bar button:disabled {
