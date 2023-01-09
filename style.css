@@ -130,7 +130,7 @@ header span {
   color: #ffffff;
 }
 
-.bottom-bar button:active {
+.bottom-bar button:enabled {
   background-color: #32B72F;
 }
 
