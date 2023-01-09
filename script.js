@@ -64,3 +64,19 @@ function handleSendButton() {
         sendButton.innerText = 'Fechar Pedido'
     }
 }
+
+// Send all the information of the order via whatsapp 
+function sendInfo() {
+    const mainPrice = (Number(main_dish.children[3].children[0].innerText.replace('R$ ', '').replace(',', '.')) + Number(drink.children[3].children[0].innerText.replace ('R$ ', '').replace(',', '.')) + Number(dessert.children[3].children[0].innerText.replace('R$ ', '').replace(',', '.'))).toFixed(2);
+
+    const whatsappLink = "https://wa.me/5521980921862?text="
+    const messageTemplate = `
+    Olá, gostaria de fazer o pedido: \n- Prato: ${main_dish.children[1].innerText} 
+    \n- Bebida: ${drink.children[1].innerText} 
+    \n- Sobremesa: ${dessert.children[1].innerText} 
+    \n- Total: R$ ${mainPrice}
+    `;
+    const encodedMessage = encodeURIComponent(messageTemplate)
+
+    window.open(whatsappLink + encodedMessage, "_blank")
+}
