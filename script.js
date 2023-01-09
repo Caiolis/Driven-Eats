@@ -74,7 +74,7 @@ function sendInfo() {
     Olá, gostaria de fazer o pedido: \n- Prato: ${main_dish.children[1].innerText} 
     \n- Bebida: ${drink.children[1].innerText} 
     \n- Sobremesa: ${dessert.children[1].innerText} 
-    \n- Total: R$ ${mainPrice}
+    \n- Total: R$ ${mainPrice.replace('.', ',')}
     `;
     const encodedMessage = encodeURIComponent(messageTemplate)
 
