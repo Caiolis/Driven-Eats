@@ -71,10 +71,11 @@ function sendInfo() {
 
     const whatsappLink = "https://wa.me/5521980921862?text="
     const messageTemplate = `
-    Olá, gostaria de fazer o pedido: \n- Prato: ${main_dish.children[1].innerText} 
-    \n- Bebida: ${drink.children[1].innerText} 
-    \n- Sobremesa: ${dessert.children[1].innerText} 
-    \n- Total: R$ ${mainPrice.replace('.', ',')}
+    Olá, gostaria de fazer o pedido: 
+    - Prato: ${main_dish.children[1].innerText} 
+    - Bebida: ${drink.children[1].innerText} 
+    - Sobremesa: ${dessert.children[1].innerText} 
+    Total: R$${mainPrice.replace('.', ',')}
     `;
     const encodedMessage = encodeURIComponent(messageTemplate)
 
