@@ -3,6 +3,9 @@ let main_dish = ''
 let drink = ''
 let dessert = ''
 
+// Send Button
+const sendButton = document.querySelector('button');
+
 // Pick the selected plate
 function pickPlate(element) {
     //Verify if the selected dish is the main dish, the drink or the dessert
@@ -44,7 +47,7 @@ function pickPlate(element) {
             }
         }
     }
-    
+    handleSendButton()
 }
 
 // Add the selected style to the plate
@@ -52,3 +55,10 @@ function addStyle(plate) {
     plate.classList.toggle('active');
 }
 
+// Verify if all the dishes are selected if so, then it removes the disabled attribute.
+function handleSendButton() {
+    if(main_dish != '' && drink != '' && dessert != '') {
+        sendButton.removeAttribute('disabled')
+        sendButton.innerText = 'Fechar Pedido'
+    }
+}
